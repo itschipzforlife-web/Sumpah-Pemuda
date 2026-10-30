@@ -1,0 +1,179 @@
+
+/* Makes sizing easier to control */
+* {
+    box-sizing: border-box;
+}
+
+/* Main page */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #fff1f2, #f4f7fb);
+    color: #202938;
+    text-align: center;
+}
+
+/* Navigation header */
+header {
+    background: linear-gradient(to right, #ff3838, #ff0000);
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    box-shadow: 0 4px 12px rgba(100, 30, 40, 0.15);
+}
+
+/* Navigation buttons */
+button {
+    background: linear-gradient(to right, #fcfcfc, #ffa8ae);
+    color: rgb(253, 0, 0);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: transform 0.25s ease,
+                background 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+/* Button animation when hovering */
+button:hover {
+    background: #ffe2e5;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(179, 38, 45, 0.25);
+}
+
+/* Button animation when clicking */
+button:active {
+    transform: translateY(0) scale(0.97);
+}
+
+/* Main title */
+h1 {
+    color: #b3262d;
+    font-size: 40px;
+    margin: 35px 15px;
+    animation: fadeIn 0.8s ease both;
+}
+
+/* Section headings */
+h2 {
+    color: #b3262d;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* White boxes for each section */
+.biografi,
+.latar-belakang,
+.pendidikan,
+.home {
+    background-color: white;
+    max-width: 900px;
+    width: calc(100% - 40px);
+    margin: 25px auto;
+    padding: 30px 35px;
+    border-radius: 16px;
+    border: 1px solid #f3dadd;
+    box-shadow: 0 5px 18px rgba(60, 30, 40, 0.08);
+    text-align: left;
+
+    animation: slideUp 0.7s ease both;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* Boxes lift when hovering */
+.biografi:hover,
+.latar-belakang:hover,
+.pendidikan:hover,
+.home:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(60, 30, 40, 0.13);
+}
+
+/* Slightly stagger the box animations */
+.latar-belakang {
+    animation-delay: 0.15s;
+}
+
+.pendidikan {
+    animation-delay: 0.3s;
+}
+
+/* Lists */
+ul,
+ol {
+    padding-left: 25px;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 12px;
+    line-height: 1.7;
+}
+
+li:last-child {
+    margin-bottom: 0;
+}
+
+/* Paragraphs */
+p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+/* Biography image */
+.biografi img {
+    display: block;
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 25px;
+    border-radius: 14px;
+    border: 3px solid #ffc0cb;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+.biografi #foto{
+    width:500px;
+}
+/* Image zoom animation on hover */
+.biografi img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(179, 38, 45, 0.2);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Slide-up animation */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
